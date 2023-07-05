@@ -1,5 +1,5 @@
 {% set name = "type_safe" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/foonathan/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 34d97123fb9bca04a333565c4a2498425d602ec0c759de4be1b8cfae77d05823
+  sha256: 19008ab9526b0d2db1ae6bbd6640f5f7a398826bb2266561472e9f1b10d85bec
 
 build:
   number: 0
@@ -40,7 +40,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'zero overhead abstractions that use the C++ type system to prevent bugs'
+  summary: zero overhead abstractions that use the C++ type system to prevent bugs
   doc_url: https://type_safe.foonathan.net/
   dev_url: https://github.com/foonathan/type_safe
 
