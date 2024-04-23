@@ -1,5 +1,5 @@
 {% set name = "type_safe" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/foonathan/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 19008ab9526b0d2db1ae6bbd6640f5f7a398826bb2266561472e9f1b10d85bec
+  sha256: a631d03c18c65726b3d1b7d41ac5806e9121367afe10dd2f408a2d75e144b734
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     # type_safe is header-only but its cmake setup is looking for a compiler to
     # build some test programs (that are not installed.)
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - make  # [not win]
   host:
     # ensure that type_safe does not vendor debug_assert
