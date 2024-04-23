@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
-
 mkdir build
 cd build
 

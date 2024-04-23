@@ -1,0 +1,16 @@
+# Make std::uncaught_exceptions() available:
+# Undefined symbols for architecture x86_64:
+#   "std::uncaught_exceptions()", referenced from:
+#       Catch::ScopedMessage::~ScopedMessage() in test.cpp.o
+#       Catch::uncaught_exceptions() in test.cpp.o
+#       Catch::ScopedMessage::~ScopedMessage() in test.cpp.o
+#       Catch::Capturer::~Capturer() in test.cpp.o
+#       Catch::RunContext::runCurrentTest(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) in test.cpp.o
+#       Catch::RunContext::assertionEnded(Catch::AssertionResult const&) in test.cpp.o
+#       Catch::RunContext::sectionEnded(Catch::SectionEndInfo const&) in test.cpp.o
+#       ...
+# ld: symbol(s) not found for architecture x86_64
+c_stdlib_version:          # [osx and x86_64]
+  - "10.12"                # [osx and x86_64]
+MACOSX_SDK_VERSION:        # [osx and x86_64]
+  - "10.12"                # [osx and x86_64]
